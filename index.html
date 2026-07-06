@@ -46,7 +46,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="nav nav--on-light">
+  <header class="nav">
     <div class="nav__inner">
       <a class="nav__brand" href="/"><img src="/assets/img/logo.png" alt="" width="34" height="34">Learn Like Me</a>
       <nav aria-label="Main">
@@ -66,7 +66,7 @@
   <main id="main">
 
     <!-- Hero — the original site's light, centered cover -->
-    <section class="hero hero--light">
+    <section class="hero">
       <div class="hero__img"><img src="/assets/img/library-session.jpg" alt="A Learn Like Me tutoring session around tables in an elementary school library" fetchpriority="high"></div>
       <div class="hero__scrim"></div>
       <div class="container hero__content">
@@ -93,12 +93,13 @@
           <li data-panel="panel-indy">Indianapolis</li>
           <li data-panel="panel-us-answer">Our Classrooms</li>
         </ol>
+        <div class="funnel__progress" aria-hidden="true"></div>
       </div>
 
       <div class="funnel__panel funnel__panel--question">
         <div class="container">
           <p class="funnel__place">The question we started with</p>
-          <p class="funnel__question">What if a child's ZIP code didn't decide what they could learn?</p>
+          <p class="funnel__question">What if a child's <span class="hl">ZIP code</span> didn't decide what they could learn?</p>
           <p>Right now, it does &mdash; measurably. Scroll through the numbers, from the whole country down to our own block.</p>
         </div>
       </div>
@@ -106,7 +107,7 @@
       <div class="funnel__panel" id="panel-us">
         <div class="container">
           <p class="funnel__place">Across the United States</p>
-          <p class="funnel__stat">$<span data-count="2700">2,700</span></p>
+          <p class="funnel__stat"><span class="hl">$<span data-count="2700">2,700</span></span></p>
           <p class="funnel__claim">less per student. That's how much state and local funding school districts serving the most Black, Latino, and Native students can receive compared with districts serving the fewest students of color.</p>
           <p class="funnel__source">Source: EdTrust, <a href="https://edtrust.org/rti/equal-is-not-good-enough/" rel="noopener">Equal Is Not Good Enough</a> (2022), U.S. Census school finance data.</p>
         </div>
@@ -115,7 +116,7 @@
       <div class="funnel__panel" id="panel-black">
         <div class="container">
           <p class="funnel__place">For Black students</p>
-          <p class="funnel__stat"><span data-count="81">81</span>%</p>
+          <p class="funnel__stat"><span class="hl"><span data-count="81">81</span>%</span></p>
           <p class="funnel__claim">of Black students graduate high school on time, compared with 90% of White students &mdash; and the gap exists in every single state.</p>
           <p class="funnel__source">Source: National Center for Education Statistics, <a href="https://nces.ed.gov/programs/coe/indicator/coi/high-school-graduation-rates" rel="noopener">Condition of Education 2024</a> (class of 2021&ndash;22, public schools).</p>
         </div>
@@ -124,7 +125,7 @@
       <div class="funnel__panel" id="panel-indiana">
         <div class="container">
           <p class="funnel__place">Here in Indiana</p>
-          <p class="funnel__stat"><span data-count="20">20</span> points</p>
+          <p class="funnel__stat"><span class="hl"><span data-count="20">20</span> points</span></p>
           <p class="funnel__claim">That's the gap on Indiana's third-grade reading exam: 68.6% of Black third graders passed in 2024, versus 88.3% of White third graders &mdash; in the one skill that predicts everything after.</p>
           <p class="funnel__source">Source: Indiana Department of Education / State Board of Education, <a href="https://www.in.gov/sboe/files/08.14.24-SBOE-IREAD-Results.pdf" rel="noopener">2024 IREAD-3 results</a>.</p>
         </div>
@@ -133,7 +134,7 @@
       <div class="funnel__panel" id="panel-indy">
         <div class="container">
           <p class="funnel__place">In Indianapolis classrooms</p>
-          <p class="funnel__stat"><span data-count="26">26</span>%</p>
+          <p class="funnel__stat"><span class="hl"><span data-count="26">26</span>%</span></p>
           <p class="funnel__claim">of Marion County students in grades 3&ndash;8 were proficient in English/language arts on the 2025 ILEARN &mdash; versus 40.6% statewide. This is where we live, and where we work.</p>
           <p class="funnel__source">Source: WFYI, <a href="https://www.wfyi.org/news/articles/marion-county-2025-student-achievement-ilearn-gaps" rel="noopener">reporting on 2025 ILEARN results</a> (July 2025), district and charter schools.</p>
         </div>
@@ -142,10 +143,10 @@
       <div class="funnel__panel funnel__panel--pivot" id="panel-us-answer">
         <div class="container">
           <p class="funnel__place">So every week, in our classrooms</p>
-          <h2>Numbers like these are why we show up.</h2>
+          <h2>Numbers like these are <span class="hl">why we show up.</span></h2>
           <p>We can't rewrite school funding formulas. But we can sit down next to a third-grader with a book, a worksheet, and an hour of undivided attention &mdash; week after week, all school year. Research says that kind of consistent tutoring works. Our students say it louder.</p>
           <div class="hero__actions">
-            <a class="btn btn--ink" href="/why-it-matters/">Read the full picture &rarr;</a>
+            <a class="btn btn--white" href="/why-it-matters/">Read the full picture &rarr;</a>
           </div>
         </div>
       </div>
@@ -156,7 +157,7 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow" style="color: var(--llm-gold-700);">Our impact since 2021</p>
-          <h2>Small hands. Big numbers.</h2>
+          <h2>Small hands. <span class="hl">Big numbers.</span></h2>
         </div>
         <div class="stats">
           <div class="stat reveal"><span class="stat__num"><span data-count="200">200</span>+</span><p class="stat__label">student members</p></div>
@@ -210,7 +211,7 @@
           </div>
           <div class="reveal">
             <p class="eyebrow" style="color: var(--llm-gold-700);">From one of our students</p>
-            <p class="lovequote__letters" aria-hidden="true">L&middot;O&middot;V&middot;E</p>
+            <p class="lovequote__letters" aria-hidden="true"><span class="hl">L&middot;O&middot;V&middot;E</span></p>
             <blockquote>
               <p>&ldquo;Lovable. Outgoing. Vibrant. Exciting. Thank you for all you have done for us.&rdquo;</p>
               <footer>&mdash; a hand-drawn card from an elementary student, after a year of Wednesday sessions</footer>
@@ -226,8 +227,8 @@
         <h2>This work takes students who show up. Be one of them.</h2>
         <p>Join as a tutor, bring Learn Like Me to your school, or partner with us as an educator.</p>
         <div class="hero__actions">
-          <a class="btn btn--ink" href="/contact/">Get involved &rarr;</a>
-          <a class="btn btn--outline btn--outline-light" href="/about-us/">Our story</a>
+          <a class="btn btn--white" href="/contact/">Get involved &rarr;</a>
+          <a class="btn btn--outline" href="/about-us/">Our story</a>
         </div>
       </div>
     </section>

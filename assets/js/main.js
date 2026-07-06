@@ -47,6 +47,40 @@
     revealed.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  /* ---- Highlighter sweep: light up .hl marks when they scroll in ---- */
+  var marks = document.querySelectorAll('.hl');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var ho = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add('is-lit');
+          ho.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    marks.forEach(function (el) { ho.observe(el); });
+  } else {
+    marks.forEach(function (el) { el.classList.add('is-lit'); });
+  }
+
+  /* ---- Funnel progress line: fill as the story is scrolled ---- */
+  var funnel = document.querySelector('.funnel');
+  var progress = document.querySelector('.funnel__progress');
+  if (funnel && progress) {
+    var ticking = false;
+    var drawProgress = function () {
+      ticking = false;
+      var rect = funnel.getBoundingClientRect();
+      var total = rect.height - window.innerHeight;
+      var p = total > 0 ? Math.min(Math.max(-rect.top / total, 0), 1) : 1;
+      progress.style.transform = 'scaleX(' + p + ')';
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(drawProgress); }
+    }, { passive: true });
+    drawProgress();
+  }
+
   /* ---- Count-up for big numbers ----
      Elements: <span data-count="86" data-prefix="$" data-suffix="%">
      Non-numeric stats skip animation. */
