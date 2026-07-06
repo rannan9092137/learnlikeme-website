@@ -46,7 +46,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="nav">
+  <header class="nav nav--on-light">
     <div class="nav__inner">
       <a class="nav__brand" href="/"><img src="/assets/img/logo.png" alt="" width="34" height="34">Learn Like Me</a>
       <nav aria-label="Main">
@@ -65,19 +65,22 @@
 
   <main id="main">
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero__img"><img src="/assets/img/hero-swings.jpg" alt="Learn Like Me tutors and elementary students playing together on swings at recess" fetchpriority="high"></div>
+    <!-- Hero — the original site's light, centered cover -->
+    <section class="hero hero--light">
+      <div class="hero__img"><img src="/assets/img/library-session.jpg" alt="A Learn Like Me tutoring session around tables in an elementary school library" fetchpriority="high"></div>
       <div class="hero__scrim"></div>
       <div class="container hero__content">
         <p class="eyebrow">A student-led 501(c)(3) nonprofit &middot; Indianapolis, Indiana</p>
-        <h1 class="hero__title">What if a child's ZIP code didn't decide what they could learn?</h1>
-        <p class="hero__sub">Learn Like Me is 200+ high school students who tutor and mentor elementary schoolers in under-resourced Indianapolis schools &mdash; every single week.</p>
+        <h1 class="hero__title">Learn Like Me</h1>
+        <p class="hero__sub">200+ high school students tutoring and mentoring elementary schoolers in under-resourced Indianapolis schools &mdash; every single week.</p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#the-numbers">See why it matters</a>
-          <a class="btn btn--outline btn--outline-light" href="/contact/">Get involved &rarr;</a>
+          <a class="btn btn--outline" href="/contact/">Get involved &rarr;</a>
         </div>
       </div>
+      <a class="hero__scroll" href="#the-numbers" aria-label="Scroll to why it matters">
+        <svg width="22" height="11" viewBox="0 0 14 7" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="7 7 0 0 14 0"></polygon></svg>
+      </a>
     </section>
 
     <!-- Funnel: the signature scroll narrative -->
@@ -90,6 +93,14 @@
           <li data-panel="panel-indy">Indianapolis</li>
           <li data-panel="panel-us-answer">Our Classrooms</li>
         </ol>
+      </div>
+
+      <div class="funnel__panel funnel__panel--question">
+        <div class="container">
+          <p class="funnel__place">The question we started with</p>
+          <p class="funnel__question">What if a child's ZIP code didn't decide what they could learn?</p>
+          <p>Right now, it does &mdash; measurably. Scroll through the numbers, from the whole country down to our own block.</p>
+        </div>
       </div>
 
       <div class="funnel__panel" id="panel-us">
@@ -199,7 +210,7 @@
           </div>
           <div class="reveal">
             <p class="eyebrow" style="color: var(--llm-gold-700);">From one of our students</p>
-            <p class="lovequote__letters">L&middot;O&middot;V&middot;E</p>
+            <p class="lovequote__letters" aria-hidden="true">L&middot;O&middot;V&middot;E</p>
             <blockquote>
               <p>&ldquo;Lovable. Outgoing. Vibrant. Exciting. Thank you for all you have done for us.&rdquo;</p>
               <footer>&mdash; a hand-drawn card from an elementary student, after a year of Wednesday sessions</footer>
